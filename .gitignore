@@ -1,0 +1,55 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/president-of-the-world-frontend/node_modules
+/president-of-the-world-backend/node_modules
+/president-of-the-world-frontend/.pnp
+/president-of-the-world-backend/.pnp
+/president-of-the-world-frontend.pnp.js
+/president-of-the-world-backend.pnp.js
+
+# testing
+/president-of-the-world-frontend/coverage
+/president-of-the-world-backend/coverage
+
+# next.js
+/president-of-the-world-frontend/.next/
+/president-of-the-world-frontend/out/
+
+# production
+/president-of-the-world-frontend/build
+/president-of-the-world-backend/build
+
+# misc
+/president-of-the-world-frontend/.DS_Store
+/president-of-the-world-frontend/*.pem
+
+# debug
+/president-of-the-world-frontend/npm-debug.log*
+/president-of-the-world-frontend/yarn-debug.log*
+/president-of-the-world-frontend/yarn-error.log*
+
+# local env files
+/president-of-the-world-frontend/.env.local
+/president-of-the-world-backend/.env.local
+/president-of-the-world-frontend/.env.development.local
+/president-of-the-world-backend/.env.development.local
+/president-of-the-world-frontend/.env.test.local
+/president-of-the-world-backend/.env.test.local
+/president-of-the-world-frontend/.env.production.local
+/president-of-the-world-backend/.env.production.local
+/president-of-the-world-frontend/.env
+/president-of-the-world-backend/.env
+
+# vercel
+/president-of-the-world-frontend/.vercel
+
+# sitemap
+/president-of-the-world-frontend/public/robots.txt
+/president-of-the-world-frontend/public/sitemap.xml
+/president-of-the-world-frontend/public/sitemap-0.xml
+
+# tests
+/president-of-the-world-frontend/test-results/
+/president-of-the-world-frontend/playwright-report/
+/president-of-the-world-frontend/playwright/.cache/

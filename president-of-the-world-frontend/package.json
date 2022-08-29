@@ -1,0 +1,93 @@
+{
+  "name": "president-of-the-world-frontend",
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "fix-all": "npm run lint-fix && npm run prettier-write",
+    "lint": "next lint",
+    "lint-total": "npx eslint ./",
+    "lint-fix": "npx eslint --fix ./",
+    "postbuild": "next-sitemap",
+    "prettier-check": "prettier --check ./",
+    "prettier-write": "prettier --write ./",
+    "start": "next start",
+    "stylelint": "npx stylelint '**/*.{js,jsx,ts,tsx,css,scss,md}'"
+  },
+  "version": "0.1.0",
+  "dependencies": {
+    "@apollo/client": "^3.6.9",
+    "@chakra-ui/react": "^2.2.9",
+    "@chakra-ui/utils": "^2.0.9",
+    "@emotion/is-prop-valid": "^1.2.0",
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
+    "@popperjs/core": "^2.11.6",
+    "@reduxjs/toolkit": "^1.8.5",
+    "apollo-link-context": "^1.0.20",
+    "deepmerge": "^4.2.2",
+    "emotion": "^11.0.0",
+    "formik": "^2.2.9",
+    "framer-motion": "^7.2.1",
+    "graphql": "^16.6.0",
+    "lodash": "4.17.21",
+    "next": "^12.2.5",
+    "next-seo": "^5.5.0",
+    "next-sitemap": "^3.1.21",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.4.0",
+    "react-redux": "^8.0.2",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@emotion/jest": "^11.10.0",
+    "@types/apollo-upload-client": "^17.0.1",
+    "@types/node": "^18.7.13",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@types/yup": "^0.29.14",
+    "@typescript-eslint/eslint-plugin": "^5.35.1",
+    "@typescript-eslint/parser": "^5.35.1",
+    "apollo": "^2.34.0",
+    "eslint": "^8.23.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-next": "12.2.5",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-styled-components-a11y": "^1.0.0",
+    "prettier": "2.7.1",
+    "stylelint": "^14.11.0",
+    "stylelint-8-point-grid": "^2.1.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-recommended": "^9.0.0",
+    "stylelint-config-standard": "^28.0.0",
+    "stylelint-config-standard-scss": "^5.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-order": "^5.0.0",
+    "typescript": "^4.8.2"
+  },
+  "@comment scripts": {
+    "build-static": [
+      "next-sitemap generator - Build and Export the Project to a (non default) Build Directory"
+    ],
+    "lint": [
+      "ESLint - Next.js ESLint configuration - Automatically run during every build"
+    ],
+    "lint-total": [
+      "ESLint - Personal ESLint configuration - More complete than the Next.js one"
+    ],
+    "prettier": [
+      "Prettier"
+    ]
+  }
+}
