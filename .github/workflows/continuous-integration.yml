@@ -26,6 +26,7 @@ jobs:
         with:
           node-version: "16"
           cache: "npm"
+          cache-dependency-path: president-of-the-world-frontend/package-lock.json
       - name: Install Dependencies
         run: npm install
       - name: ESLint
