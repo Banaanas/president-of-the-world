@@ -123,16 +123,8 @@ World Presidential Election Application achieved as part of <a href="https://ful
 
 1 - Clone the Project's repository
 
-- Front End
-
 ```sh
-git clone https://github.com/Banaanas/president-of-the-world-frontend.git
-```
-
-- Back End
-
-```sh
-git clone https://github.com/Banaanas/president-of-the-world-backend.git
+git clone https://github.com/Banaanas/president-of-the-world.git
 ```
 
 2 - Install NPM Packages / Dependencies
@@ -147,6 +139,10 @@ npm install
 
 ```sh
 npm run dev
+```
+
+```sh
+npm run start
 ```
 
 - Back End
@@ -187,8 +183,7 @@ Distributed under the MIT License. See <a href="./LICENSE">`LICENSE`</a> for mor
 
 ## Project Links
 
-- [Front-End Repository](https://github.com/Banaanas/president-of-the-world-frontend) - 💻
-- [Back-End Repository](https://github.com/Banaanas/president-of-the-world-backend) - 🤖
+- [https://github.com/Banaanas/president-of-the-world](https://github.com/Banaanas/president-of-the-world)
 
 <!-- ACKNOWLEDGEMENTS -->
 
