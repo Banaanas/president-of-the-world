@@ -4,11 +4,20 @@ name: Continuous Integration
 # This action works with ALL branches
 on:
   push:
+    paths:
+      - ".github/workflows/**"
+      - "president-of-the-world-frontend/**"
   pull_request:
+    paths:
+      - ".github/workflows/**"
+      - "president-of-the-world-frontend/**"
 
 jobs:
   continuous_integration:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: president-of-the-world-frontend
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
