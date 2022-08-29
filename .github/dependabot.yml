@@ -9,3 +9,7 @@ updates:
     directory: "/president-of-the-world-frontend" # Location of package manifests
     schedule:
       interval: "weekly"
+  - package-ecosystem: "npm" # See documentation for possible values
+    directory: "/president-of-the-world-backend" # Location of package manifests
+    schedule:
+      interval: "weekly"
