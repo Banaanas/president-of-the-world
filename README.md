@@ -31,7 +31,7 @@
 </p>
 
 <h1 align="center">President of the W🌍rld</h1>
-<h3 align="center">TypeScript - MongoDB - GraphQL - React - Node.js - Next.js</h3>
+<h3 align="center">React - Next.js - Node.js - GraphQL - TypeScript - MongoDB</h3>
 
 <p align="center">
     Performant, elegant and democratic Full Stack World Presidential Election Application.<br/><br/>
@@ -141,10 +141,6 @@ npm install
 npm run dev
 ```
 
-```sh
-npm run start
-```
-
 - Back End
 
 ```sh
@@ -157,6 +153,10 @@ npm run dev
 
 ```sh
 npm run build
+```
+
+```sh
+npm run start
 ```
 
 - Back End
