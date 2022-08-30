@@ -10,11 +10,11 @@ interface WrapperProps {
 const Wrapper = styled.button<WrapperProps>`
   width: fit-content;
   padding: 8px 16px;
-  color: ${appTheme.colors.secondary.default};
+  color: ${appTheme.colors.secondary["500"]};
   font-weight: ${appTheme.fontWeight.bold};
   font-size: ${appTheme.fontSize.sm};
   text-transform: uppercase;
-  background-color: ${appTheme.colors.warning.default};
+  background-color: ${appTheme.colors.warning["500"]};
   border-radius: 8px;
   cursor: pointer;
   transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);

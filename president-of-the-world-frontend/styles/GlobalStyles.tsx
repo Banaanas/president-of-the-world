@@ -34,7 +34,7 @@ const GlobalStyles = () => (
         color: ${appTheme.colors.textDefault};
         font-family: ${appTheme.fontFamily.openSans},
           ${appTheme.fontFamily.alternativeFonts};
-        background-color: ${appTheme.colors.secondary.default};
+        background-color: ${appTheme.colors.secondary["500"]};
       }
 
       #__next {
@@ -110,7 +110,7 @@ const GlobalStyles = () => (
       }
 
       a:focus {
-        outline: 5px auto ${appTheme.colors.primary.default};
+        outline: 5px auto ${appTheme.colors.primary["500"]};
       }
 
       img,

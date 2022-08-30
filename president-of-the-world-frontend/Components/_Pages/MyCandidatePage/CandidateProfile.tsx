@@ -32,7 +32,7 @@ const DeleteButton = styled(UpdateLink)`
   ${submitButtonStyle};
 
   margin-left: ${marginButtons};
-  background-color: ${appTheme.colors.error.default};
+  background-color: ${appTheme.colors.error["500"]};
 `;
 
 type LoggedInUserDataAllRequired = Required<LoggedInUserData>;

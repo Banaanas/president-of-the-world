@@ -12,14 +12,14 @@ const StyledSocialIconsContainer = styled.div`
   justify-content: center;
   width: 100%;
   padding-bottom: 2px;
-  background-color: ${appTheme.colors.secondary.default};
+  background-color: ${appTheme.colors.secondary["500"]};
 
   a {
     margin: 0 8px;
   }
 
   svg {
-    color: ${appTheme.colors.primary.light};
+    color: ${appTheme.colors.primary["400"]};
     font-size: 19px;
     transform: scale(1);
     opacity: 0.9;

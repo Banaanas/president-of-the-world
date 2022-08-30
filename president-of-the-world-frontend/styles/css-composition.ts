@@ -9,8 +9,8 @@ const formStyle = css`
   justify-content: center;
   min-width: 300px;
   padding: 24px;
-  color: ${appTheme.colors.secondary.default};
-  background-color: ${appTheme.colors.primary.default};
+  color: ${appTheme.colors.secondary["500"]};
+  background-color: ${appTheme.colors.primary["500"]};
   border-radius: 10px;
   box-shadow: ${appTheme.elevation.xl};
 
@@ -29,7 +29,7 @@ const formHeadingStyle = css`
   font-size: ${appTheme.fontSize.xl};
   text-align: center;
   text-transform: uppercase;
-  border: ${appTheme.colors.primary.default};
+  border: ${appTheme.colors.primary["500"]};
 
   &::after {
     position: absolute;
@@ -41,7 +41,7 @@ const formHeadingStyle = css`
     background: linear-gradient(
       to right,
       transparent,
-      ${appTheme.colors.secondary.default},
+      ${appTheme.colors.secondary["500"]},
       transparent
     );
     border-radius: 5px;
@@ -56,13 +56,13 @@ const submitButtonStyle = css`
   font-weight: ${appTheme.fontWeight.bold};
   text-align: center;
   text-transform: uppercase;
-  background-color ${appTheme.colors.warning.default};
+  background-color ${appTheme.colors.warning["500"]};
   border-radius: 8px;
   cursor: pointer;
   transition: filter 500ms ease;
 
   &:hover {
-    filter: drop-shadow(0 0 2px ${appTheme.colors.secondary.default});
+    filter: drop-shadow(0 0 2px ${appTheme.colors.secondary["500"]});
   }
 `;
 

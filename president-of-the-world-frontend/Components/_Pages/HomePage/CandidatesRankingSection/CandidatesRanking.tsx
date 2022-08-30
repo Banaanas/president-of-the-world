@@ -32,14 +32,14 @@ const CandidatesTable = styled.div`
   &::-webkit-scrollbar {
     width: 8px;
     height: 10px;
-    background-color: ${appTheme.colors.primary.darker};
+    background-color: ${appTheme.colors.primary["700"]};
     border-bottom-right-radius: ${tableBorderRadius};
     border-bottom-left-radius: ${tableBorderRadius};
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: ${appTheme.colors.tertiary.darker};
-    border: solid 1px ${appTheme.colors.tertiary.default};
+    background-color: ${appTheme.colors.tertiary["700"]};
+    border: solid 1px ${appTheme.colors.tertiary["500"]};
     border-radius: ${tableBorderRadius};
     border-radius: ${tableBorderRadius};
   }
@@ -62,12 +62,12 @@ const CandidateRow = styled.div<CandidateRowProps>`
   width: 100%;
   min-width: 600px;
   padding: 16px 0;
-  color: ${appTheme.colors.secondary.default};
-  background-color: ${appTheme.colors.primary.default};
+  color: ${appTheme.colors.secondary["500"]};
+  background-color: ${appTheme.colors.primary["500"]};
   background-color: ${({ secondary }) =>
     secondary
-      ? `${appTheme.colors.tertiary.lightest1}`
-      : `${appTheme.colors.tertiary.lighter}`};
+      ? `${appTheme.colors.tertiary["200"]}`
+      : `${appTheme.colors.tertiary["300"]}`};
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 `;
@@ -131,7 +131,7 @@ export const CandidatePoliticalOrientation = styled(
       }
       return `
         background-color: lightgray;
-        color: ${appTheme.colors.secondary.default};
+        color: ${appTheme.colors.secondary["500"]};
     `;
     }}
   }
@@ -146,7 +146,7 @@ const CandidateVotes = styled(CandidateRank)`
 
   & svg {
     margin-right: 2px;
-    color: ${appTheme.colors.tertiary.darker};
+    color: ${appTheme.colors.tertiary["700"]};
   }
 `;
 

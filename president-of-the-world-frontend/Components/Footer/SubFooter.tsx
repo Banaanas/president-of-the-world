@@ -7,7 +7,7 @@ import ContactIcons from "./ContactIcons";
 
 const StyledAumIcon = styled(AumIcon)`
   margin: 0 4px;
-  color: ${appTheme.colors.tertiary.default};
+  color: ${appTheme.colors.tertiary["500"]};
   font-size: 16px;
 `;
 
@@ -21,7 +21,7 @@ const StyledSpan = styled.span`
 
   a {
     margin-right: 4px;
-    color: ${appTheme.colors.tertiary.default};
+    color: ${appTheme.colors.tertiary["500"]};
     text-decoration: none;
   }
 `;
