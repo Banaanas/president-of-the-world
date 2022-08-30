@@ -30,15 +30,15 @@ const ChakraFormControl = styled(FormControl)`
 
 const ChakraLabel = styled(FormLabel)`
   font-weight: ${appTheme.fontWeight.bold};
-  border: ${appTheme.colors.secondary.default};
+  border: ${appTheme.colors.secondary["500"]};
 `;
 
 const ChakraInput = styled(Input)`
-  border: ${appTheme.colors.secondary.lighter} 1px solid;
+  border: ${appTheme.colors.secondary["300"]} 1px solid;
 
   &:focus {
-    border-color: ${appTheme.colors.tertiary.default};
-    box-shadow: 0 0 0 1px ${appTheme.colors.tertiary.default};
+    border-color: ${appTheme.colors.tertiary["500"]};
+    box-shadow: 0 0 0 1px ${appTheme.colors.tertiary["500"]};
   }
 `;
 

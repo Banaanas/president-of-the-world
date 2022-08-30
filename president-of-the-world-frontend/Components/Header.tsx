@@ -44,11 +44,11 @@ const StyledLink = styled.a`
   margin: 0 4px;
   padding: 2px 8px;
   overflow: hidden;
-  color: ${appTheme.colors.secondary.default};
+  color: ${appTheme.colors.secondary["500"]};
   font-weight: ${appTheme.fontWeight.bold};
   text-decoration: none;
   list-style: none;
-  background-color: ${appTheme.colors.primary.default};
+  background-color: ${appTheme.colors.primary["500"]};
   border-radius: 8px;
   transition: opacity 250ms ease;
 
@@ -65,7 +65,7 @@ const StyledLink = styled.a`
     left: 0;
     z-index: -1;
     display: block;
-    background-color: ${appTheme.colors.tertiary.default};
+    background-color: ${appTheme.colors.tertiary["500"]};
     opacity: 0;
     transition: opacity 250ms ease;
     content: "";
@@ -77,12 +77,12 @@ const StyledLink = styled.a`
 `;
 
 const StyledLiGradient = styled(StyledLink)`
-  color: ${appTheme.colors.secondary.default};
+  color: ${appTheme.colors.secondary["500"]};
   list-style: none;
-  background-color: ${appTheme.colors.tertiary.default};
+  background-color: ${appTheme.colors.tertiary["500"]};
   background: linear-gradient(
-    ${appTheme.colors.tertiary.default},
-    ${appTheme.colors.tertiary.lighter}
+    ${appTheme.colors.tertiary["500"]},
+    ${appTheme.colors.tertiary["300"]}
   );
 `;
 

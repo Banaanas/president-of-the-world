@@ -20,7 +20,7 @@ const Container = styled.div<{ size?: string; width?: string; color?: string }>`
   border-width: ${({ width }) => width || "10px"};
   border-color: ${appTheme.colors.white};
   border-left-color: ${({ color }) =>
-    color || appTheme.colors.tertiary.default};
+    color || appTheme.colors.tertiary["500"]};
   border-radius: 50%;
   transform: translateZ(0);
   animation: ${rotateAnimation} 0.75s infinite linear;

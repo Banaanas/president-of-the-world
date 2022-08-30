@@ -40,7 +40,7 @@ const CancelLink = styled.a`
   ${submitButtonStyle};
 
   margin-left: ${marginButtons};
-  background-color: ${appTheme.colors.error.default};
+  background-color: ${appTheme.colors.error["500"]};
 `;
 
 // Form Validation Schema - Yup

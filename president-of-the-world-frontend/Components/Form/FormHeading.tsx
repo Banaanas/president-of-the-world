@@ -22,7 +22,7 @@ const SubHeadingContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  color: ${appTheme.colors.secondary.light};
+  color: ${appTheme.colors.secondary["400"]};
   font-weight: ${appTheme.fontWeight.medium};
   font-size: ${appTheme.fontSize.sm};
 

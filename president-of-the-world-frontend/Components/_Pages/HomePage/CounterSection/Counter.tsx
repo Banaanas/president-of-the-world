@@ -12,7 +12,7 @@ const Container = styled.div`
 `;
 
 const Heading = styled.div`
-  color: ${appTheme.colors.tertiary.default};
+  color: ${appTheme.colors.tertiary["500"]};
 `;
 
 const CounterContainer = styled.div`
@@ -38,7 +38,7 @@ const TimeUnitContainer = styled.div`
   font-size: ${appTheme.fontSize.xl};
 
   span {
-    color: ${appTheme.colors.secondary.lighter};
+    color: ${appTheme.colors.secondary["300"]};
   }
 `;
 

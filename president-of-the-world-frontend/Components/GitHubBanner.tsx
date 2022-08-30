@@ -10,9 +10,9 @@ const StyledDiv = styled.div`
     position: absolute;
     top: 0;
     right: 0;
-    color: ${appTheme.colors.primary.default};
+    color: ${appTheme.colors.primary["500"]};
     border: 0;
-    fill: ${appTheme.colors.tertiary.default};
+    fill: ${appTheme.colors.tertiary["500"]};
   }
 
   .octo-arm {

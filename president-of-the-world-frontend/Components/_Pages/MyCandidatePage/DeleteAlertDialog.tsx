@@ -18,7 +18,7 @@ import toasts from "../../../utils/toasts";
 
 const StyledAlertDialogContent = styled(AlertDialogContent)`
   width: calc(${appTheme.globalMinWidth} - 20px);
-  color: ${appTheme.colors.secondary.default};
+  color: ${appTheme.colors.secondary["500"]};
 
   @media ${appTheme.queries.tabletAndUp} {
     width: ${appTheme.globalMinWidth};
@@ -78,7 +78,7 @@ const DeleteAlertDialog = ({
         <StyledAlertDialogContent>
           <StyledAlertDialogHeader>Delete Candidate</StyledAlertDialogHeader>
 
-          <AlertDialogBody color={appTheme.colors.secondary.default}>
+          <AlertDialogBody color={appTheme.colors.secondary["500"]}>
             Do you really want to delete your Candidate ?
           </AlertDialogBody>
 
@@ -86,14 +86,14 @@ const DeleteAlertDialog = ({
             <Button
               ref={cancelRef}
               onClick={onCloseAlertDialog}
-              color={appTheme.colors.secondary.default}
+              color={appTheme.colors.secondary["500"]}
             >
               Cancel
             </Button>
             <Button
               /* eslint-disable-next-line @typescript-eslint/no-misused-promises */
               onClick={() => handleDeleteCandidate(candidateID)}
-              background={appTheme.colors.error.default}
+              background={appTheme.colors.error["500"]}
               color={appTheme.colors.textDefault}
               ml={3}
             >

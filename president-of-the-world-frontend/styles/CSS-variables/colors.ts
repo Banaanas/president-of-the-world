@@ -2,67 +2,67 @@ import { css } from "@emotion/react";
 
 const colors = css`
   /* Primary Color */
-  --color-primary-darker: hsl(60, 1%, 75%);
-  --color-primary-dark: hsl(60, 100%, 100%);
-  --color-primary-default: hsl(60, 100%, 100%);
-  --color-primary-light: hsl(60, 100%, 100%);
-  --color-primary-lighter: hsl(0, 0%, 100%);
-  --color-primary-lightest-1: hsl(0, 0%, 100%);
-  --color-primary-lightest-2: hsl(0, 0%, 100%);
+  --color-primary-100: hsl(0, 0%, 100%);
+  --color-primary-200: hsl(0, 0%, 100%);
+  --color-primary-300: hsl(0, 0%, 100%);
+  --color-primary-400: hsl(60, 100%, 100%);
+  --color-primary-500: hsl(60, 100%, 100%);
+  --color-primary-600: hsl(60, 100%, 100%);
+  --color-primary-700: hsl(60, 1%, 75%);
 
   /* Secondary Color */
-  --color-secondary-darker: hsl(252, 26%, 4%);
-  --color-secondary-dark: hsl(249, 26%, 5%);
-  --color-secondary-default: hsl(247, 24%, 7%);
-  --color-secondary-light: hsl(252, 2%, 54%);
-  --color-secondary-lighter: hsl(240, 2%, 77%);
-  --color-secondary-lightest-1: hsl(0, 0%, 95%);
-  --color-secondary-lightest-2: hsl(0, 0%, 95%);
+  --color-secondary-100: hsl(0, 0%, 95%);
+  --color-secondary-200: hsl(0, 0%, 95%);
+  --color-secondary-300: hsl(240, 2%, 77%);
+  --color-secondary-400: hsl(252, 2%, 54%);
+  --color-secondary-500: hsl(247, 24%, 7%);
+  --color-secondary-600: hsl(249, 26%, 5%);
+  --color-secondary-700: hsl(252, 26%, 4%);
 
   /* Tertiary Color */
-  --color-tertiary-darker: hsl(339, 65%, 41%);
-  --color-tertiary-dark: hsl(339, 78%, 55%);
-  --color-tertiary-default: hsl(339, 78%, 55%);
-  --color-tertiary-light: hsl(339, 78%, 77%);
-  --color-tertiary-lighter: hsl(339, 76%, 89%);
-  --color-tertiary-lightest-1: hsl(340, 75%, 95%);
-  --color-tertiary-lightest-2: hsl(336, 84%, 98%);
+  --color-tertiary-100: hsl(336, 84%, 98%);
+  --color-tertiary-200: hsl(340, 75%, 95%);
+  --color-tertiary-300: hsl(339, 76%, 89%);
+  --color-tertiary-400: hsl(339, 78%, 77%);
+  --color-tertiary-500: hsl(339, 78%, 55%);
+  --color-tertiary-600: hsl(339, 78%, 55%);
+  --color-tertiary-700: hsl(339, 65%, 41%);
 
   /* Gray */
-  --color-gray-darker: hsl(210, 4%, 40%);
-  --color-gray-dark: hsl(210, 6%, 59%);
-  --color-gray-default: hsl(212, 14%, 79%);
-  --color-gray-light: hsl(210, 15%, 89%);
-  --color-gray-lighter: hsl(220, 11%, 95%);
-  --color-gray-lightest-1: hsl(240, 9%, 98%);
-  --color-gray-lightest-2: hsl(240, 20%, 99%);
+  --color-gray-100: hsl(240, 20%, 99%);
+  --color-gray-200: hsl(240, 9%, 98%);
+  --color-gray-300: hsl(220, 11%, 95%);
+  --color-gray-400: hsl(210, 15%, 89%);
+  --color-gray-500: hsl(212, 14%, 79%);
+  --color-gray-600: hsl(210, 6%, 59%);
+  --color-gray-700: hsl(210, 4%, 40%);
 
   /* Success Color */
-  --color-success-darker: hsl(120, 53%, 25%);
-  --color-success-dark: hsl(120, 53%, 49%);
-  --color-success-default: hsl(120, 53%, 49%);
-  --color-success-light: hsl(120, 53%, 49%);
-  --color-success-lighter: hsl(120, 52%, 75%);
-  --color-success-lightest-1: hsl(120, 51%, 87%);
-  --color-success-lightest-2: hsl(120, 54%, 98%);
+  --color-success-100: hsl(120, 54%, 98%);
+  --color-success-200: hsl(120, 51%, 87%);
+  --color-success-300: hsl(120, 52%, 75%);
+  --color-success-400: hsl(120, 53%, 49%);
+  --color-success-500: hsl(120, 53%, 49%);
+  --color-success-600: hsl(120, 53%, 49%);
+  --color-success-700: hsl(120, 53%, 25%);
 
   /* Warning Color */
-  --color-warning-darker: hsl(44, 80%, 27%);
-  --color-warning-dark: hsl(44, 79%, 40%);
-  --color-warning-default: hsl(44, 90%, 53%);
-  --color-warning-light: hsl(44, 90%, 76%);
-  --color-warning-lighter: hsl(44, 90%, 76%);
-  --color-warning-lightest-1: hsl(44, 92%, 95%);
-  --color-warning-lightest-2: hsl(49, 85%, 98%);
+  --color-warning-100: hsl(49, 85%, 98%);
+  --color-warning-200: hsl(44, 92%, 95%);
+  --color-warning-300: hsl(44, 90%, 76%);
+  --color-warning-400: hsl(44, 90%, 76%);
+  --color-warning-500: hsl(44, 90%, 53%);
+  --color-warning-600: hsl(44, 79%, 40%);
+  --color-warning-700: hsl(44, 80%, 27%);
 
   /* Error Color */
-  --color-error-darker: hsl(0, 62%, 29%);
-  --color-error-dark: hsl(360, 63%, 44%);
-  --color-error-default: hsl(360, 86%, 58%);
-  --color-error-light: hsl(0, 85%, 79%);
-  --color-error-lighter: hsl(0, 85%, 89%);
-  --color-error-lightest-1: hsl(0, 82%, 96%);
-  --color-error-lightest-2: hsl(0, 82%, 98%);
+  --color-error-100: hsl(0, 82%, 98%);
+  --color-error-200: hsl(0, 82%, 96%);
+  --color-error-300: hsl(0, 85%, 89%);
+  --color-error-400: hsl(0, 85%, 79%);
+  --color-error-500: hsl(360, 86%, 58%);
+  --color-error-600: hsl(360, 63%, 44%);
+  --color-error-700: hsl(0, 62%, 29%);
 
   /* Black */
   --color-black-default: hsl(216, 18%, 16%);
@@ -71,15 +71,15 @@ const colors = css`
   --color-white-default: hsl(0, 0%, 100%);
 
   /* Text Color */
-  --color-text-default: var(--color-primary-default);
+  --color-text-default: var(--color-primary-500);
 
   /* Selection */
-  --color-selection: var(--color-secondary-darker);
-  --color-selection-background: var(--color-tertiary-default);
+  --color-selection: var(--color-secondary-700);
+  --color-selection-background: var(--color-tertiary-500);
 
   /* Scrollbar */
-  --color-scrollbar: var(--color-tertiary-default);
-  --color-scrollbar-background: var(--color-secondary-light);
+  --color-scrollbar: var(--color-tertiary-500);
+  --color-scrollbar-background: var(--color-secondary-400);
 `;
 
 export default colors;

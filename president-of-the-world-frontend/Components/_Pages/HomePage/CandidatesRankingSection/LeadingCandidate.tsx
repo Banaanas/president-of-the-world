@@ -25,7 +25,7 @@ const LeadingCandidateCard = styled.div`
   justify-content: center;
   margin: 16px 4px;
   padding: 8px 16px;
-  background-color: ${appTheme.colors.tertiary.darker};
+  background-color: ${appTheme.colors.tertiary["700"]};
   border-radius: 8px;
 
   & > div {
@@ -44,8 +44,8 @@ const NumberContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding: 0 8px;
-  color: ${appTheme.colors.tertiary.default};
-  background-color: ${appTheme.colors.primary.default};
+  color: ${appTheme.colors.tertiary["500"]};
+  background-color: ${appTheme.colors.primary["500"]};
   border-radius: 4px;
 `;
 
@@ -81,7 +81,7 @@ const CountryContainer = styled.div`
 `;
 
 const StyledLocationIcon = styled(LocationIcon)`
-  background-color: ${appTheme.colors.tertiary.default};
+  background-color: ${appTheme.colors.tertiary["500"]};
   border-radius: 50%;
 `;
 
@@ -118,7 +118,7 @@ const VoteContainer = styled(BaseContainer)`
   /* Votes Number and Star Icon Container */
   & span:nth-of-type(2) {
     margin: 8px;
-    color: ${appTheme.colors.warning.default};
+    color: ${appTheme.colors.warning["500"]};
   }
 `;
 
@@ -154,9 +154,9 @@ const afterAnimation = keyframes`
 const StyledVoteButton = styled(VoteButton)`
   position: relative;
   overflow: hidden;
-  color: ${appTheme.colors.primary.default};
-  background-color: ${appTheme.colors.secondary.default};
-  border: 3px solid ${appTheme.colors.primary.default};
+  color: ${appTheme.colors.primary["500"]};
+  background-color: ${appTheme.colors.secondary["500"]};
+  border: 3px solid ${appTheme.colors.primary["500"]};
 
   /* On small devices, buttonAnimation breaks layout  */
   @media ${appTheme.queries.tabletAndUp} {
@@ -172,7 +172,7 @@ const StyledVoteButton = styled(VoteButton)`
     left: 0;
     z-index: -1;
     display: block;
-    background-color: ${appTheme.colors.tertiary.darker};
+    background-color: ${appTheme.colors.tertiary["700"]};
     opacity: 0;
     transition: opacity 250ms ease;
     content: "";
@@ -187,7 +187,7 @@ const StyledVoteButton = styled(VoteButton)`
     left: 0;
     z-index: -1;
     display: block;
-    background-color: ${appTheme.colors.tertiary.darker};
+    background-color: ${appTheme.colors.tertiary["700"]};
     opacity: 1;
     animation: ${afterAnimation} ${coordinatedAnimation};
     content: "";
