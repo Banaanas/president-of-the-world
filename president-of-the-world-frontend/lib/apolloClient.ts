@@ -1,15 +1,17 @@
 import { useMemo } from "react";
 import {
   ApolloClient,
+  from,
   HttpLink,
   InMemoryCache,
   NormalizedCacheObject,
 } from "@apollo/client";
-import { setContext } from "apollo-link-context";
 import { concatPagination } from "@apollo/client/utilities";
 import merge from "deepmerge";
 import isEqual from "lodash/isEqual";
-import type { AppProps } from "next/app";
+import { onError } from "@apollo/client/link/error";
+
+/*** https://github.com/vercel/next.js/blob/canary/examples/with-apollo/lib/apolloClient.js ***/
 
 export const APOLLO_STATE_PROP_NAME = "__APOLLO_STATE__";
 export const localStorageValue = "authenticatedUser";
@@ -26,22 +28,14 @@ const GRAPHQL_URI =
 
 let apolloClient: ApolloClient<NormalizedCacheObject>;
 
-const authLink = setContext((_, { headers }) => {
-  // Get the authentication token from local storage if it exists
-
-  let token;
-  // Get the authentication token from local storage if it exists
-  // Check if there is a window object (Next.js SSR)
-  if (typeof window !== "undefined") {
-    token = localStorage.getItem(localStorageValue);
-  }
-  // Return the headers to the context so httpLink can read them
-  return {
-    headers: {
-      ...headers,
-      authorization: token ? `bearer ${token}` : "",
-    },
-  };
+const errorLink = onError(({ graphQLErrors, networkError }) => {
+  if (graphQLErrors)
+    graphQLErrors.forEach(({ message, locations, path }) =>
+      console.log(
+        `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`,
+      ),
+    );
+  if (networkError) console.log(`[Network error]: ${networkError}`);
 });
 
 const httpLink = new HttpLink({
@@ -52,7 +46,7 @@ const httpLink = new HttpLink({
 function createApolloClient() {
   return new ApolloClient({
     ssrMode: typeof window === "undefined",
-    link: authLink.concat(httpLink as any) as any,
+    link: from([errorLink, httpLink]),
     cache: new InMemoryCache({
       typePolicies: {
         Query: {
@@ -101,9 +95,9 @@ export function initializeApollo(
 
 export function addApolloState(
   client: ApolloClient<NormalizedCacheObject>,
-  pageProps: AppProps["pageProps"],
+  pageProps: { props: any },
 ) {
-  if (pageProps?.props) {
+  if (pageProps) {
     // eslint-disable-next-line no-param-reassign
     pageProps.props[APOLLO_STATE_PROP_NAME] = client.cache.extract();
   }
@@ -111,7 +105,7 @@ export function addApolloState(
   return pageProps;
 }
 
-export function useApollo(pageProps: AppProps["pageProps"]) {
+export function useApollo(pageProps: any) {
   const state = pageProps[APOLLO_STATE_PROP_NAME];
   const store = useMemo(() => initializeApollo(state), [state]);
   return store;
