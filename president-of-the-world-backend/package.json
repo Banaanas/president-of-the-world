@@ -9,7 +9,7 @@
     "test": "NODE_ENV=test nodemon server.js"
   },
   "dependencies": {
-    "apollo-server": "^3.10.2",
+    "apollo-server": "^3.10.3",
     "bcrypt": "^5.0.1",
     "dotenv": "^16.0.3",
     "graphql": "^16.6.0",
