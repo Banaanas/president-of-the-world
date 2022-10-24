@@ -14,12 +14,12 @@
     "dotenv": "^16.0.3",
     "graphql": "^16.6.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.6.5",
+    "mongoose": "^6.6.7",
     "mongoose-unique-validator": "^3.1.0"
   },
   "devDependencies": {
     "crypto-random-string": "^5.0.0",
-    "eslint": "^8.25.0",
+    "eslint": "^8.26.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
