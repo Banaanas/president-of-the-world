@@ -30,7 +30,7 @@
     "framer-motion": "^7.6.2",
     "graphql": "^16.6.0",
     "lodash": "4.17.21",
-    "next": "^12.3.1",
+    "next": "^13.0.0",
     "next-seo": "^5.13.0",
     "next-sitemap": "^3.1.30",
     "prop-types": "^15.8.1",
