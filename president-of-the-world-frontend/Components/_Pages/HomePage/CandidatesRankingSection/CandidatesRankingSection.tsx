@@ -1,7 +1,7 @@
 import { useMutation } from "@apollo/client";
 import { useToast } from "@chakra-ui/react";
 import styled from "@emotion/styled";
-import Link from "next/link";
+import NextLink from "next/link";
 import { useEffect } from "react";
 
 import { currentPageLinks } from "../../../../data/current-page-links";
@@ -24,7 +24,7 @@ const StyledH2 = styled(StyledH1)`
   font-size: ${appTheme.fontSize.xl2};
 `;
 
-const StyledLink = styled.a`
+const StyledNextLink = styled(NextLink)`
   position: relative;
   align-items: center;
   justify-content: center;
@@ -102,9 +102,9 @@ const CandidatesRankingSection = ({
       <StyledSection>
         <Span>
           Candidates List is empty.
-          <Link href={navLinks.myCandidate.href} passHref legacyBehavior>
-            <StyledLink>Please chose one Candidate</StyledLink>
-          </Link>
+          <StyledNextLink href={navLinks.myCandidate.href}>
+            Please chose one Candidate
+          </StyledNextLink>
         </Span>
       </StyledSection>
     );

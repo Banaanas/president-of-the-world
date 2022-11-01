@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import { Field, Formik } from "formik";
-import Link from "next/link";
+import NextLink from "next/link";
 import { useRouter } from "next/router";
 import { object, string } from "yup";
 
@@ -36,7 +36,7 @@ const UpdateButton = styled.button`
   ${submitButtonStyle};
 `;
 
-const CancelLink = styled.a`
+const CancelLink = styled(NextLink)`
   ${submitButtonStyle};
 
   margin-left: ${marginButtons};
@@ -187,9 +187,7 @@ const MyCandidateForm = ({ loggedInUser }: LoggedInUserData) => {
           </Field>
           <ButtonsContainer>
             <UpdateButton type="submit">SUBMIT</UpdateButton>
-            <Link href={navLinks.myCandidate.href} passHref legacyBehavior>
-              <CancelLink>CANCEL</CancelLink>
-            </Link>
+            <CancelLink href={navLinks.myCandidate.href}>CANCEL</CancelLink>
           </ButtonsContainer>
         </StyledFormikForm>
       )}

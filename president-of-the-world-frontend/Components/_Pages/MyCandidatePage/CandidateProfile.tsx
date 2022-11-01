@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import Link from "next/link";
+import NextLink from "next/link";
 import React, { useRef, useState } from "react";
 
 import navLinks from "../../../data/navLinks";
@@ -24,11 +24,11 @@ const ProfileHeading = styled.div`
 
 const marginButtons = "6px";
 
-const UpdateLink = styled.a`
+const UpdateLink = styled(NextLink)`
   ${submitButtonStyle};
 `;
 
-const DeleteButton = styled(UpdateLink)`
+const DeleteButton = styled.button`
   ${submitButtonStyle};
 
   margin-left: ${marginButtons};
@@ -67,9 +67,7 @@ const CandidateProfile = ({ loggedInUser }: LoggedInUserDataAllRequired) => {
         <div>{loggedInUser?.candidate?.votes}</div>
       </DetailContainer>
       <ButtonsContainer>
-        <Link href={navLinks.updateCandidate.href} passHref legacyBehavior>
-          <UpdateLink>Update</UpdateLink>
-        </Link>
+        <UpdateLink href={navLinks.updateCandidate.href}>Update</UpdateLink>
         <DeleteButton as="button" onClick={() => setIsOpen(true)}>
           Delete
         </DeleteButton>

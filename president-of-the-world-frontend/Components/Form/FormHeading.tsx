@@ -58,7 +58,7 @@ const FormHeading = ({
       {subHeading ? (
         <SubHeadingContainer>
           <span>{subHeading}</span>
-          {link ? <Link href={link} legacyBehavior>{linkText}</Link> : null}
+          {link ? <Link href={link}>{linkText}</Link> : null}
         </SubHeadingContainer>
       ) : null}
     </Container>

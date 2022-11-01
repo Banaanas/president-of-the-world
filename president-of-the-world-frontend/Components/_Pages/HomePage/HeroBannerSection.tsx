@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import { currentPageLinks } from "../../../data/current-page-links";
 import navLinks from "../../../data/navLinks";
 import { Candidate } from "../../../types/types";
@@ -19,9 +17,9 @@ const HeroBannerSection = ({
     {/* If NO candidates yet, link to MyCandidatePageElse.
       Else smooth scroll to Candidates Table. */}
     {!allCandidates || allCandidates.length === 0 ? (
-      <Link href={navLinks.updateCandidate.href} passHref legacyBehavior>
-        <LinkButton>Change the World</LinkButton>
-      </Link>
+      <LinkButton href={navLinks.updateCandidate.href}>
+        Change the World
+      </LinkButton>
     ) : (
       <LinkButton href={`#${currentPageLinks.homePage.rankingSection}`}>
         Change the World with your Vote

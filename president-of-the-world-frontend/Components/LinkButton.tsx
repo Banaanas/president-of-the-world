@@ -1,4 +1,6 @@
+import { css } from "@emotion/react";
 import styled from "@emotion/styled";
+import NextLink from "next/link";
 import React from "react";
 
 import appTheme from "../styles/appTheme";
@@ -7,7 +9,7 @@ interface WrapperProps {
   href?: string;
 }
 
-const Wrapper = styled.button<WrapperProps>`
+const commonStyle = css`
   width: fit-content;
   padding: 8px 16px;
   color: ${appTheme.colors.secondary["500"]};
@@ -33,6 +35,14 @@ const Wrapper = styled.button<WrapperProps>`
   }
 `;
 
+const Button = styled.button<WrapperProps>`
+  ${commonStyle}
+`;
+
+const StyledNextLink = styled(NextLink)`
+  ${commonStyle}
+`;
+
 interface LinkButtonProps {
   href?: string;
   onClick?: () => void;
@@ -46,15 +56,13 @@ const LinkButton = ({
   children,
   ...delegated
 }: LinkButtonProps) => {
-  // If LinkButton gets href === a
-  // Else, === button
-  const tag = typeof href === "string" ? "a" : "button";
+  if (href) return <StyledNextLink href={href}>{children}</StyledNextLink>;
 
   return (
     // eslint-disable-next-line react/jsx-props-no-spreading
-    <Wrapper as={tag} href={href} onClick={onClick} {...delegated}>
+    <Button href={href} onClick={onClick} {...delegated}>
       {children}
-    </Wrapper>
+    </Button>
   );
 };
 

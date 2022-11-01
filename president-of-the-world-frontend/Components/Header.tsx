@@ -1,7 +1,7 @@
 import { ApolloError, useApolloClient } from "@apollo/client";
 import { useToast } from "@chakra-ui/react";
 import styled from "@emotion/styled";
-import Link from "next/link";
+import NextLink from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 
 import navLinks from "../data/navLinks";
@@ -121,15 +121,15 @@ const Header = () => {
 
   return (
     <HeaderContainer>
-      <Link href={navLinks.home.href} legacyBehavior>
+      <NextLink href={navLinks.home.href}>
         <LogoIcon />
-      </Link>
+      </NextLink>
       <Nav>
         <List>
           <Li>
-            <Link href={navLinks.myCandidate.href} passHref legacyBehavior>
+            <NextLink href={navLinks.myCandidate.href}>
               <StyledLiGradient>My Candidate</StyledLiGradient>
-            </Link>
+            </NextLink>
           </Li>
           <Li>
             {isAuthenticated ? (

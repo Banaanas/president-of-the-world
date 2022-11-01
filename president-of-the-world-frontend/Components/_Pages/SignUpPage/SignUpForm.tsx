@@ -37,7 +37,7 @@ const validationSchemaYup = object().shape({
 
 const SignUpForm = () => {
   // Normally, useState is not used with Formik (values).
-  // But after the Sign Up process, username and password
+  // But after the Sign-Up process, username and password
   // were needed to complete the Login process, during the
   // createUser - useMutation - onCompleted step.
   const [username, setUsername] = useState("");
@@ -125,8 +125,8 @@ const SignUpForm = () => {
       validationSchema={validationSchemaYup}
       validateOnMount /* Boolean - Run (also) validation when Formik Component mounts - This way, Submit is disabled on mount */
       onSubmit={(values, { setSubmitting, resetForm }) => {
-        // Update username and password state in order to use them during the
-        //  during the createUser - useMutation - onCompleted step, when
+        // Update username and password state in order to use them
+        // during the createUser - useMutation - onCompleted step, when
         // Login useMutation is used.
         setUsername(values.username);
         setPassword(values.password);
