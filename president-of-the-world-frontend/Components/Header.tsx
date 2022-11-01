@@ -121,7 +121,7 @@ const Header = () => {
 
   return (
     <HeaderContainer>
-      <Link href={navLinks.home.href}>
+      <Link href={navLinks.home.href} legacyBehavior>
         <LogoIcon />
       </Link>
       <Nav>
