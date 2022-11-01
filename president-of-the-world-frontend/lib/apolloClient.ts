@@ -1,7 +1,6 @@
 import { useMemo } from "react";
 import {
   ApolloClient,
-  from,
   HttpLink,
   InMemoryCache,
   NormalizedCacheObject,
@@ -9,7 +8,7 @@ import {
 import { concatPagination } from "@apollo/client/utilities";
 import merge from "deepmerge";
 import isEqual from "lodash/isEqual";
-import { onError } from "@apollo/client/link/error";
+import { setContext } from "apollo-link-context";
 
 /*** https://github.com/vercel/next.js/blob/canary/examples/with-apollo/lib/apolloClient.js ***/
 
@@ -28,14 +27,22 @@ const GRAPHQL_URI =
 
 let apolloClient: ApolloClient<NormalizedCacheObject>;
 
-const errorLink = onError(({ graphQLErrors, networkError }) => {
-  if (graphQLErrors)
-    graphQLErrors.forEach(({ message, locations, path }) =>
-      console.log(
-        `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`,
-      ),
-    );
-  if (networkError) console.log(`[Network error]: ${networkError}`);
+const authLink = setContext((_, { headers }) => {
+  // Get the authentication token from local storage if it exists
+
+  let token;
+  // Get the authentication token from local storage if it exists
+  // Check if there is a window object (Next.js SSR)
+  if (typeof window !== "undefined") {
+    token = localStorage.getItem(localStorageValue);
+  }
+  // Return the headers to the context so httpLink can read them
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `bearer ${token}` : "",
+    },
+  };
 });
 
 const httpLink = new HttpLink({
@@ -46,7 +53,7 @@ const httpLink = new HttpLink({
 function createApolloClient() {
   return new ApolloClient({
     ssrMode: typeof window === "undefined",
-    link: from([errorLink, httpLink]),
+    link: authLink.concat(httpLink as any) as any,
     cache: new InMemoryCache({
       typePolicies: {
         Query: {
