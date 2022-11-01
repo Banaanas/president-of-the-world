@@ -67,7 +67,7 @@ const CandidateProfile = ({ loggedInUser }: LoggedInUserDataAllRequired) => {
         <div>{loggedInUser?.candidate?.votes}</div>
       </DetailContainer>
       <ButtonsContainer>
-        <Link href={navLinks.updateCandidate.href} passHref>
+        <Link href={navLinks.updateCandidate.href} passHref legacyBehavior>
           <UpdateLink>Update</UpdateLink>
         </Link>
         <DeleteButton as="button" onClick={() => setIsOpen(true)}>

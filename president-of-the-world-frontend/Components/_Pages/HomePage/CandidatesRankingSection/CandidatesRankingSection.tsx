@@ -102,7 +102,7 @@ const CandidatesRankingSection = ({
       <StyledSection>
         <Span>
           Candidates List is empty.
-          <Link href={navLinks.myCandidate.href} passHref>
+          <Link href={navLinks.myCandidate.href} passHref legacyBehavior>
             <StyledLink>Please chose one Candidate</StyledLink>
           </Link>
         </Span>

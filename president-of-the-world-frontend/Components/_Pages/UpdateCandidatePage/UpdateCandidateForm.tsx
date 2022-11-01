@@ -187,7 +187,7 @@ const MyCandidateForm = ({ loggedInUser }: LoggedInUserData) => {
           </Field>
           <ButtonsContainer>
             <UpdateButton type="submit">SUBMIT</UpdateButton>
-            <Link href={navLinks.myCandidate.href} passHref>
+            <Link href={navLinks.myCandidate.href} passHref legacyBehavior>
               <CancelLink>CANCEL</CancelLink>
             </Link>
           </ButtonsContainer>

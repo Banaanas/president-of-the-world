@@ -58,11 +58,7 @@ const FormHeading = ({
       {subHeading ? (
         <SubHeadingContainer>
           <span>{subHeading}</span>
-          {link ? (
-            <Link href={link}>
-              <a>{linkText}</a>
-            </Link>
-          ) : null}
+          {link ? <Link href={link}>{linkText}</Link> : null}
         </SubHeadingContainer>
       ) : null}
     </Container>

@@ -122,14 +122,12 @@ const Header = () => {
   return (
     <HeaderContainer>
       <Link href={navLinks.home.href}>
-        <a>
-          <LogoIcon />
-        </a>
+        <LogoIcon />
       </Link>
       <Nav>
         <List>
           <Li>
-            <Link href={navLinks.myCandidate.href} passHref>
+            <Link href={navLinks.myCandidate.href} passHref legacyBehavior>
               <StyledLiGradient>My Candidate</StyledLiGradient>
             </Link>
           </Li>
