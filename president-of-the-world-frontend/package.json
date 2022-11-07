@@ -22,7 +22,7 @@
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@popperjs/core": "^2.11.6",
-    "@reduxjs/toolkit": "^1.8.6",
+    "@reduxjs/toolkit": "^1.9.0",
     "apollo-link-context": "^1.0.20",
     "deepmerge": "^4.2.2",
     "emotion": "^11.0.0",
