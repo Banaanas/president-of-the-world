@@ -27,7 +27,7 @@
     "deepmerge": "^4.2.2",
     "emotion": "^11.0.0",
     "formik": "^2.2.9",
-    "framer-motion": "^7.6.4",
+    "framer-motion": "^7.6.6",
     "graphql": "^16.6.0",
     "lodash": "4.17.21",
     "next": "^13.0.1",
