@@ -76,7 +76,7 @@ const StyledLink = styled.a`
   }
 `;
 
-const StyledLiGradient = styled(StyledLink)`
+const StyledLiGradient = styled(NextLink)`
   color: ${appTheme.colors.secondary["500"]};
   list-style: none;
   background-color: ${appTheme.colors.tertiary["500"]};
@@ -127,9 +127,9 @@ const Header = () => {
       <Nav>
         <List>
           <Li>
-            <NextLink href={navLinks.myCandidate.href}>
-              <StyledLiGradient>My Candidate</StyledLiGradient>
-            </NextLink>
+            <StyledLiGradient href={navLinks.myCandidate.href}>
+              My Candidate
+            </StyledLiGradient>
           </Li>
           <Li>
             {isAuthenticated ? (
