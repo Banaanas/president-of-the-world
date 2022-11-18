@@ -60,7 +60,7 @@ const LinkButton = ({
 
   return (
     // eslint-disable-next-line react/jsx-props-no-spreading
-    <Button href={href} onClick={onClick} {...delegated}>
+    <Button onClick={onClick} {...delegated}>
       {children}
     </Button>
   );
