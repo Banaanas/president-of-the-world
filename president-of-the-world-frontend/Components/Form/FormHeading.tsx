@@ -18,6 +18,7 @@ const FormTitle = styled.div`
 
 const SubHeadingContainer = styled.div`
   display: flex;
+  column-gap: 8px;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
@@ -30,9 +31,7 @@ const SubHeadingContainer = styled.div`
     flex-direction: row;
   }
 
-  /* Link in SignUp and Login Forms */
   a {
-    margin-left: 8px;
     font-weight: ${appTheme.fontWeight.bold};
     text-transform: uppercase;
     text-decoration: underline;

@@ -30,8 +30,6 @@ import {
   StyledFormikForm,
 } from "../../Form/StyledFormComponents";
 
-const marginButtons = "6px";
-
 const UpdateButton = styled.button`
   ${submitButtonStyle};
 `;
@@ -39,7 +37,6 @@ const UpdateButton = styled.button`
 const CancelLink = styled(NextLink)`
   ${submitButtonStyle};
 
-  margin-left: ${marginButtons};
   background-color: ${appTheme.colors.error["500"]};
 `;
 

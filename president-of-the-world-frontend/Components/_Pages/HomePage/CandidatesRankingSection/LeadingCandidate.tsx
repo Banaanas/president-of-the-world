@@ -21,22 +21,13 @@ const Container = styled.div`
 const LeadingCandidateCard = styled.div`
   display: flex;
   flex-wrap: wrap;
+  column-gap: 16px;
   align-items: center;
   justify-content: center;
   margin: 16px 4px;
   padding: 8px 16px;
   background-color: ${appTheme.colors.tertiary["700"]};
   border-radius: 8px;
-
-  & > div {
-    margin: 16px;
-  }
-
-  /* No margin for First and Last children Div */
-  & > div:first-of-type,
-  & > div:last-of-type {
-    margin: 0;
-  }
 `;
 
 const NumberContainer = styled.div`
@@ -56,9 +47,11 @@ const BaseContainer = styled.div`
 `;
 
 const NameContainer = styled(BaseContainer)`
+  display: flex;
+  column-gap: 4px;
+
   /* Last Name */
   span:nth-of-type(1) {
-    margin-right: 4px; /* Space between lastName and firstName */
     text-transform: uppercase;
   }
 
@@ -70,14 +63,9 @@ const NameContainer = styled(BaseContainer)`
 
 const CountryContainer = styled.div`
   display: flex;
+  column-gap: 4px;
   align-items: center;
   justify-content: center;
-  margin-right: 4px;
-
-  /* LocationIcon SVG */
-  & svg {
-    margin-right: 2px;
-  }
 `;
 
 const StyledLocationIcon = styled(LocationIcon)`

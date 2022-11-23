@@ -6,13 +6,13 @@ import appTheme from "../../styles/appTheme";
 import ContactIcons from "./ContactIcons";
 
 const StyledAumIcon = styled(AumIcon)`
-  margin: 0 4px;
   color: ${appTheme.colors.tertiary["500"]};
   font-size: 16px;
 `;
 
 const StyledSpan = styled.span`
   display: flex;
+  column-gap: 4px;
   align-items: center;
   justify-content: center;
   width: 100%;

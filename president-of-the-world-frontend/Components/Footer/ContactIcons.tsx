@@ -9,14 +9,11 @@ import appTheme from "../../styles/appTheme";
 
 const StyledSocialIconsContainer = styled.div`
   display: flex;
+  column-gap: 16px;
   justify-content: center;
   width: 100%;
   padding-bottom: 2px;
   background-color: ${appTheme.colors.secondary["500"]};
-
-  a {
-    margin: 0 8px;
-  }
 
   svg {
     color: ${appTheme.colors.primary["400"]};

@@ -126,7 +126,6 @@ export const CandidatePoliticalOrientation = styled(
         return `
         background-color: blue;
         color: ${appTheme.colors.textDefault};
-
     `;
       }
       return `

@@ -37,7 +37,7 @@ const UpdateCandidate = () => {
         {/* Page excluded from sitemap */}
       </Head>
 
-      {data?.loggedInUser.candidate && !loading ? (
+      {data?.loggedInUser?.candidate && !loading ? (
         <UpdateCandidatePage loggedInUser={data?.loggedInUser} />
       ) : (
         <StyledPageMain>

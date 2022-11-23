@@ -29,8 +29,13 @@ const Nav = styled.nav`
 
 const List = styled.ul`
   display: flex;
+  column-gap: 4px;
   align-items: center;
   justify-content: space-around;
+
+  @media ${appTheme.queries.tabletAndUp} {
+    column-gap: 16px;
+  }
 `;
 
 const Li = styled.li`
@@ -41,7 +46,6 @@ const StyledLink = styled.a`
   position: relative;
   z-index: 1;
   display: flex;
-  margin: 0 4px;
   padding: 2px 8px;
   overflow: hidden;
   color: ${appTheme.colors.secondary["500"]};
@@ -53,7 +57,6 @@ const StyledLink = styled.a`
   transition: opacity 250ms ease;
 
   @media ${appTheme.queries.tabletAndUp} {
-    margin: 0 16px;
     padding: 8px;
   }
 
@@ -79,6 +82,7 @@ const StyledLink = styled.a`
 const StyledLiGradient = styled(NextLink)`
   padding: 2px 8px;
   color: ${appTheme.colors.secondary["500"]};
+  font-weight: ${appTheme.fontWeight.bold};
   list-style: none;
   background-color: ${appTheme.colors.tertiary["500"]};
   background: linear-gradient(

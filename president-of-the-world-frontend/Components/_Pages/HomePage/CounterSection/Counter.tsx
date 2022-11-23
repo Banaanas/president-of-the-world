@@ -17,23 +17,17 @@ const Heading = styled.div`
 
 const CounterContainer = styled.div`
   display: flex;
+  column-gap: 16px;
   flex-direction: column;
 
   @media ${appTheme.queries.tabletAndUp} {
     flex-direction: row;
   }
-
-  /* TimeUnitContainer - DD/HH/MM/SS */
-  & > div:nth-of-type(2),
-  & > div:nth-of-type(3) {
-    @media ${appTheme.queries.tabletAndUp} {
-      margin: 0 16px;
-    }
-  }
 `;
 
 const TimeUnitContainer = styled.div`
   display: flex;
+  column-gap: 6px;
   align-items: baseline;
   font-size: ${appTheme.fontSize.xl};
 
@@ -43,7 +37,6 @@ const TimeUnitContainer = styled.div`
 `;
 
 const TimeUnit = styled.div`
-  margin-right: 6px;
   font-size: ${appTheme.fontSize.xl2};
 
   @media ${appTheme.queries.tabletAndUp} {

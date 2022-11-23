@@ -49,6 +49,7 @@ const ChakraErrorMessage = styled(FormErrorMessage)`
 
 const ButtonsContainer = styled.div`
   display: flex;
+  column-gap: 6px;
   width: 100%;
   margin-top: 16px;
 `;
