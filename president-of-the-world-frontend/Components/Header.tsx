@@ -77,6 +77,7 @@ const StyledLink = styled.a`
 `;
 
 const StyledLiGradient = styled(NextLink)`
+  padding: 2px 8px;
   color: ${appTheme.colors.secondary["500"]};
   list-style: none;
   background-color: ${appTheme.colors.tertiary["500"]};
@@ -84,6 +85,12 @@ const StyledLiGradient = styled(NextLink)`
     ${appTheme.colors.tertiary["500"]},
     ${appTheme.colors.tertiary["300"]}
   );
+  border-radius: 8px;
+
+  @media ${appTheme.queries.tabletAndUp} {
+    margin: 0 16px;
+    padding: 8px;
+  }
 `;
 
 const Header = () => {
