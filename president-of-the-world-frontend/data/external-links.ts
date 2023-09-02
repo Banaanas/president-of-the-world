@@ -22,7 +22,7 @@ export const externalLinks = {
   },
   gitHubRepository: {
     ariaLabel: "GitHub Repository Link",
-    href: "https://github.com/Banaanas/president-of-the-world-frontend",
+    href: "https://github.com/Banaanas/president-of-the-world",
     title: "GitHub Repository",
   },
 };
